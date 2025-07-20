@@ -36,15 +36,6 @@ sudo apt install jq espeak curl
 * `~/.weather_alert/locations.txt` — List of monitored ZIPs/coordinates.
 * `~/.weather_alert/logs/` — Logs for each weather check.
 
----
-
-## 🚀 How to Use
-
-1. **Run the script:**
-
-   ```bash
-   chmod +x weather_alert.sh
-   ./weather_alert.sh
    ```
 
 2. **Options Menu:**
@@ -108,5 +99,5 @@ rm ~/.weather_alert/locations.txt
   * [weather.gov](https://www.weather.gov/documentation/services-web-api) (NWS API) for forecast and alert data
 * The update interval is **60 seconds** (can be changed in the script).
 
-#didnt write this fully myself but i reviewed it and it it how it is built.
+#didnt write this fully myself but i reviewed it and this is how this is built.
 
