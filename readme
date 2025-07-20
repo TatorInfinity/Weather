@@ -1,0 +1,127 @@
+Here's a **README** for your Bash Weather Alert System script, written in a clear and informative format for other users or developers who might use or contribute to it.
+
+---
+
+# 🌦️ Bash Weather Alert System
+
+A lightweight Bash script that monitors weather conditions and alerts you with audible beeps for severe weather. This tool logs forecasts and weather alerts for multiple U.S. ZIP codes or latitude/longitude coordinates.
+
+> ⚠️ **Disclaimer:** This script is **not** a replacement for official weather systems. It uses data from public APIs and should only be used for **logging or low-priority weather checks**. For emergencies, refer to the National Weather Service (NWS) or your local authorities.
+
+---
+
+## 📦 Features
+
+* Monitor multiple ZIP codes or lat,lon coordinates.
+* Alerts with sound when there's a **severe weather warning** (like Tornado, Flood, Storm).
+* Logs forecast and alert info to a timestamped file.
+* Text-to-speech announcement with `espeak`.
+* Simple interactive terminal menu.
+
+---
+
+## 🛠 Requirements
+
+Make sure the following tools are installed:
+
+* `bash`
+* `curl`
+* `jq`
+* `espeak` (for alert sound)
+
+Install dependencies on Debian-based systems:
+
+```bash
+sudo apt update
+sudo apt install jq espeak curl
+```
+
+---
+
+## 📂 Directory Structure
+
+* `~/.weather_alert/locations.txt` — List of monitored ZIPs/coordinates.
+* `~/.weather_alert/logs/` — Logs for each weather check.
+
+---
+
+## 🚀 How to Use
+
+1. **Run the script:**
+
+   ```bash
+   chmod +x weather_alert.sh
+   ./weather_alert.sh
+   ```
+
+2. **Options Menu:**
+
+   ```
+   1. Add location (ZIP or lat,lon)
+   2. Remove location
+   3. List saved locations
+   4. Start monitoring (runs until stopped)
+   5. Exit
+   ```
+
+3. **During alerts:**
+
+   * You'll hear beeps and the event will be read aloud.
+   * Press `q` to silence the alert.
+
+---
+
+## 📝 Example Usage
+
+### Add a ZIP code:
+
+```
+> 1
+Enter ZIP or lat,lon: 90210
+📍 Added: 90210
+```
+
+### Monitor:
+
+```
+> 4
+==== WEATHER UPDATE [2025-07-20 08:00:00] ====
+🌐 [Beverly Hills, CA] (34.0901,-118.4065)
+Forecast:
+Today: Sunny with a high near 85°F...
+
+🌀 Alerts:
+🔺 Heat Advisory | Severity: Moderate
+...
+```
+
+---
+
+## 🧹 Reset Locations
+
+To clear all saved locations:
+
+```bash
+rm ~/.weather_alert/locations.txt
+```
+
+---
+
+## 📋 Notes
+
+* This script uses:
+
+  * [Zippopotam.us](http://api.zippopotam.us/) for ZIP-to-coordinates
+  * [weather.gov](https://www.weather.gov/documentation/services-web-api) (NWS API) for forecast and alert data
+* The update interval is **60 seconds** (can be changed in the script).
+
+---
+
+## 🔒 License
+
+MIT License. You are free to modify or share, but please don't use this tool as your only source of emergency weather information.
+
+---
+
+Let me know if you’d like this README formatted in Markdown (`README.md`) or turned into a man page or help text output in the script itself.
+
