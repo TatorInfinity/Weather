@@ -115,13 +115,5 @@ rm ~/.weather_alert/locations.txt
   * [weather.gov](https://www.weather.gov/documentation/services-web-api) (NWS API) for forecast and alert data
 * The update interval is **60 seconds** (can be changed in the script).
 
----
-
-## 🔒 License
-
-MIT License. You are free to modify or share, but please don't use this tool as your only source of emergency weather information.
-
----
-
-Let me know if you’d like this README formatted in Markdown (`README.md`) or turned into a man page or help text output in the script itself.
+#didnt write this fully myself but i reviewed it and it it how it is built.
 
